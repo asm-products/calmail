@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -38,4 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-ruby '2.1.1'
+gem 'omniauth-google-oauth2'
+gem 'devise'
+gem 'haml-rails'
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'google-api-client'
+gem 'pry', :groups => [:development, :test]
