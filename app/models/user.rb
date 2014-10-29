@@ -16,13 +16,22 @@ class User < ActiveRecord::Base
     user
   end
 
-  def self.send_daily_emails
+  def self.send_daily_emails!
     # TODO: Filter to select specific users
-    # TODO: Add model to schedule/track emails
-    User.all.each { |user| user.send_daily_email }
+    User.all.each { |user| user.send_daily_email! }
   end
 
-  def send_daily_email
-    UserMailer.daily_digest_email(self).deliver
+  def fetch_calendar_events
+    return {}
+  end
+
+  def send_daily_email!
+    calendar_events = fetch_calendar_events
+    email = Email.create!(
+      user: self,
+      data: calendar_events
+    )
+    UserMailer.daily_digest_email(self, calendar_events).deliver!
+    email.update_attributes!(delivered: true)
   end
 end
