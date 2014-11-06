@@ -18,7 +18,6 @@ class User < ActiveRecord::Base
     user
   end
 
-
   def self.send_daily_emails_by_time(time)
     User.where(utc_time: time).each { |user| user.send_daily_email! }
   end
@@ -60,7 +59,6 @@ class User < ActiveRecord::Base
   def tz_offset
     tzinfo.current_period.offset.utc_total_offset  / 3600
   end
-
 
   def tzinfo
     begin

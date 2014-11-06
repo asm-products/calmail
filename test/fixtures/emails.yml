@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  delivered: false
+  data: 
+  user_id: 
+
+two:
+  delivered: false
+  data: 
+  user_id: 

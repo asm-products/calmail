@@ -1,9 +1,12 @@
 class UserMailer < ActionMailer::Base
   default from: 'from@example.com'
 
-  def daily_digest_email(user)
-    # TODO: Fetch calendar events
+  def daily_digest_email(user, calendar_events)
     @user = user
-    mail(to: @user.email, subject: 'Calmail Daily Summary')
+    @calendar_events = calendar_events
+    mail(
+      to: @user.email,
+      subject: 'Calmail Daily Summary'
+    )
   end
 end
