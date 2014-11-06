@@ -46,3 +46,14 @@ gem 'haml-rails'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'google-api-client'
 gem 'pry', :groups => [:development, :test]
+#gem 'tzinfo'
+#gem 'tzinfo-data'
+gem 'sidekiq'
+gem 'clockwork', require: false
+#gem 'sinatra', '>= 1.3.0', :require => nil
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'fabrication'
+  gem 'faker'
+end
