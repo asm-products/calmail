@@ -90,6 +90,7 @@ GEM
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.6.11)
+    interception (0.5)
     jbuilder (2.2.4)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -131,6 +132,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
+      pry
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -243,6 +247,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   pg
   pry
+  pry-rescue
   rails (= 4.1.6)
   rails_12factor
   rspec-rails (~> 3.0.0)
