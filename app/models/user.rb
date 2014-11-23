@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     user = User.where(:email => data['email']).first
 
     unless user
-      user = User.create(
+      user = User.create!(
         token: omniauth['credentials']['token'],
         name: data['name'],
         first_name: data['first_name'],
