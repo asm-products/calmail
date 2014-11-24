@@ -4,6 +4,10 @@ class EventsFetcher
     self.refresh_token = refresh_token
   end
 
+  def tomorrow_events
+    calendar.tomorrow_events
+  end
+
   private
 
   attr_accessor :refresh_token

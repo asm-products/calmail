@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:google_oauth2]
   before_save :generate_utc_time
   validate :must_be_valid_preferred_hour, :must_be_valid_preferred_min, :must_be_valid_time_zone
+
+  has_many :user_events
+  has_many :events, through: :user_events
+
   def self.find_for_google_oauth2(omniauth, signed_in_resource=nil)
     data = omniauth.info
     user = User.where(:email => data['email']).first
