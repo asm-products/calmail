@@ -1,7 +1,7 @@
 class EventsCreator
 
-  def initialize(events, user_id)
-    self.events = events
+  def initialize(calendar_events, user_id)
+    self.calendar_events = calendar_events
     self.user_id = user_id
   end
 
@@ -13,7 +13,7 @@ class EventsCreator
         event.title = calendar_event.title
         event.summary = calendar_event.description
         event.location = calendar_event.location
-        event.raw = calendar_event.raw
+        event.raw = calendar_event.raw.to_json
         event.html_link = calendar_event.html_link
       end.tap do |event|
         user.events << event
@@ -23,7 +23,7 @@ class EventsCreator
 
   private
 
-  attr_accessor :events, :user_id
+  attr_accessor :calendar_events, :user_id
 
   def user
     @user ||= User.find(user_id)
