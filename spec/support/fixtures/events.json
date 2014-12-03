@@ -1,0 +1,145 @@
+{
+ "kind": "calendar#events",
+ "etag": "\"1417160508296000\"",
+ "summary": "przemowiersz@gmail.com",
+ "updated": "2014-11-28T07:41:48.296Z",
+ "timeZone": "Europe/Warsaw",
+ "accessRole": "owner",
+ "defaultReminders": [
+  {
+   "method": "email",
+   "minutes": 10
+  },
+  {
+   "method": "popup",
+   "minutes": 30
+  }
+ ],
+ "nextSyncToken": "CMCWv6XmnMICEMCWv6XmnMICGAU=",
+ "items": [
+  {
+   "kind": "calendar#event",
+   "etag": "\"2833566278912000\"",
+   "id": "ro6nh9ujnqlsuuoh0t35crslk4",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=cm82bmg5dWpucWxzdXVvaDB0MzVjcnNsazQgcHJ6ZW1vd2llcnN6QG0",
+   "created": "2014-11-23T22:52:19.000Z",
+   "updated": "2014-11-23T22:52:19.456Z",
+   "summary": "Wydarzenie",
+   "creator": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "organizer": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2014-11-24T00:00:00+01:00"
+   },
+   "end": {
+    "dateTime": "2014-11-24T01:00:00+01:00"
+   },
+   "iCalUID": "ro6nh9ujnqlsuuoh0t35crslk4@google.com",
+   "sequence": 0,
+   "reminders": {
+    "useDefault": true
+   }
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"2833725689410000\"",
+   "id": "ecims7fdrcb368oivb96n2ruis",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=ZWNpbXM3ZmRyY2IzNjhvaXZiOTZuMnJ1aXMgcHJ6ZW1vd2llcnN6QG0",
+   "created": "2014-11-24T21:00:44.000Z",
+   "updated": "2014-11-24T21:00:44.705Z",
+   "summary": "November 23  event",
+   "creator": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "organizer": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2014-11-23T00:00:00+01:00"
+   },
+   "end": {
+    "dateTime": "2014-11-23T01:00:00+01:00"
+   },
+   "iCalUID": "ecims7fdrcb368oivb96n2ruis@google.com",
+   "sequence": 0,
+   "reminders": {
+    "useDefault": true
+   }
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"2833732852248000\"",
+   "id": "frr0vojsvr49upptrepv2dgk8o",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=ZnJyMHZvanN2cjQ5dXBwdHJlcHYyZGdrOG8gcHJ6ZW1vd2llcnN6QG0",
+   "created": "2014-11-24T21:49:51.000Z",
+   "updated": "2014-11-24T22:00:26.124Z",
+   "summary": "Test",
+   "creator": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "organizer": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2014-11-25T23:30:00+01:00"
+   },
+   "end": {
+    "dateTime": "2014-11-26T01:00:00+01:00"
+   },
+   "iCalUID": "frr0vojsvr49upptrepv2dgk8o@google.com",
+   "sequence": 4,
+   "reminders": {
+    "useDefault": true
+   }
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"2833733112932000\"",
+   "id": "i5h9lmk370qlbn4i5dkn26tfbg",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=aTVoOWxtazM3MHFsYm40aTVka24yNnRmYmcgcHJ6ZW1vd2llcnN6QG0",
+   "created": "2014-11-24T21:00:56.000Z",
+   "updated": "2014-11-24T22:02:36.466Z",
+   "summary": "Tomorrow event",
+   "creator": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "organizer": {
+    "email": "przemowiersz@gmail.com",
+    "displayName": "Przemysław Mroczek",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2014-11-25T01:30:00+01:00"
+   },
+   "end": {
+    "dateTime": "2014-11-25T02:30:00+01:00"
+   },
+   "iCalUID": "i5h9lmk370qlbn4i5dkn26tfbg@google.com",
+   "sequence": 1,
+   "reminders": {
+    "useDefault": true
+   }
+  }
+ ]
+}
