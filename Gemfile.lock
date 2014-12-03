@@ -99,7 +99,6 @@ GEM
     hashie (3.3.1)
     hike (1.2.3)
     hitimes (1.2.2)
-    httplog (0.2.7)
     i18n (0.6.11)
     interception (0.5)
     jbuilder (2.2.4)
@@ -268,7 +267,6 @@ DEPENDENCIES
   google-api-client
   google_calendar (= 0.4.1)
   haml-rails
-  httplog
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-google-oauth2
