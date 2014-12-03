@@ -6,7 +6,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', :kind => 'Google'
       # TODO: Remove this actually sign in
       session['devise.google_data'] = request.env['omniauth.auth']
-      # sign_in_and_redirect @user, :event => :authentication
+      #sign_in_and_redirect @user, :event => :authentication
       redirect_to root_url
     else
       session['devise.google_data'] = request.env['omniauth.auth']

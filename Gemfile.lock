@@ -35,6 +35,10 @@ GEM
       multi_json (>= 1.0.0)
     bcrypt (3.1.9)
     builder (3.2.2)
+    byebug (3.5.1)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+      slop (~> 3.6)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     clockwork (1.0.0)
@@ -48,7 +52,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    columnize (0.8.9)
     connection_pool (2.0.0)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
+    debugger-linecache (1.2.0)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -79,6 +87,8 @@ GEM
       retriable (>= 1.4)
       signet (>= 0.5.0)
       uuidtools (>= 2.1.0)
+    google_calendar (0.4.1)
+      signet (>= 0.5.1)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -90,6 +100,7 @@ GEM
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.6.11)
+    interception (0.5)
     jbuilder (2.2.4)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -131,7 +142,15 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (2.0.0)
+      byebug (~> 3.4)
+      pry (~> 0.10)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
+      pry
     rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.6)
@@ -179,6 +198,7 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
+    safe_yaml (1.0.4)
     sass (3.2.19)
     sass-rails (4.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -199,6 +219,10 @@ GEM
       faraday (>= 0.9.0.rc5)
       jwt (>= 0.1.5)
       multi_json (>= 1.0.0)
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
     slop (3.6.0)
     spring (1.1.3)
     sprockets (2.11.3)
@@ -225,6 +249,9 @@ GEM
     uuidtools (2.1.5)
     warden (1.2.3)
       rack (>= 1.0)
+    webmock (1.20.4)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -237,18 +264,23 @@ DEPENDENCIES
   fabrication
   faker
   google-api-client
+  google_calendar (= 0.4.1)
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-google-oauth2
   pg
   pry
+  pry-byebug
+  pry-rescue (= 1.4.1)
   rails (= 4.1.6)
   rails_12factor
   rspec-rails (~> 3.0.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   sidekiq
+  sinatra
   spring
   turbolinks
   uglifier (>= 1.3.0)
+  webmock (= 1.20.4)

@@ -48,9 +48,14 @@ gem 'google-api-client'
 gem 'pry', :groups => [:development, :test]
 gem 'sidekiq'
 gem 'clockwork', require: false
+gem 'google_calendar', '0.4.1'
+gem 'webmock', '1.20.4', group: :test
+gem 'sinatra', group: :test
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'fabrication'
   gem 'faker'
+  gem 'pry-rescue', '1.4.1'
+  gem 'pry-byebug'
 end
