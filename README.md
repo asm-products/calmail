@@ -1,5 +1,7 @@
 # CalMail
 
+<a href="https://assembly.com/calmail/bounties"><img src="https://asm-badger.herokuapp.com/calmail/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
+
 ## Your day's meetings summarized nightly
 
 This is a product being built by the Assembly community. You can help push this idea forward by visiting [https://assemblymade.com/calmail](https://assemblymade.com/calmail).
