@@ -52,6 +52,8 @@ gem 'google_calendar', '0.4.1'
 gem 'webmock', '1.20.4', group: :test
 gem 'sinatra', '1.4.5', group: :test
 gem 'timecop', '0.7.1', group: :test
+gem 'better_errors', group: :development
+gem 'binding_of_caller', group: :development
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
