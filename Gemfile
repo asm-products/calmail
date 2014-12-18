@@ -40,25 +40,25 @@ gem 'rails_12factor'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'omniauth-google-oauth2'
-gem 'devise'
-gem 'haml-rails'
-gem 'dotenv-rails', :groups => [:development, :test]
-gem 'google-api-client'
-gem 'pry', :groups => [:development, :test]
-gem 'sidekiq'
+gem 'omniauth-google-oauth2', '0.2.6'
+gem 'devise', '3.4.1'
+gem 'haml-rails', '0.5.3'
+gem 'google-api-client', '0.7.1'
+gem 'sidekiq', '3.2.4'
 gem 'clockwork', require: false
 gem 'google_calendar', '0.4.1'
 gem 'webmock', '1.20.4', group: :test
 gem 'sinatra', '1.4.5', group: :test
 gem 'timecop', '0.7.1', group: :test
-gem 'better_errors', group: :development
-gem 'binding_of_caller', group: :development
+gem 'better_errors', '2.0.0', group: :development
+gem 'binding_of_caller', '0.7.2', group: :development
 
 group :development, :test do
+  gem 'dotenv-rails', '1.0.2'
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'fabrication'
-  gem 'faker'
+  gem 'fabrication', '2.11.3'
+  gem 'faker', '1.4.3'
   gem 'pry-rescue', '1.4.1'
-  gem 'pry-byebug'
+  gem 'pry-byebug', '2.0.0'
+  gem 'pry',  '0.10.1'
 end
