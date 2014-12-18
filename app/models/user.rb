@@ -5,18 +5,15 @@ class User < ActiveRecord::Base
   has_many :events, through: :user_events
   has_one :mail_schedule
 
-  def self.find_for_google_oauth2(omniauth, signed_in_resource=nil)
+  def self.create_or_update_for_google_oauth2(omniauth, signed_in_resource=nil)
     data = omniauth.info
-    user = User.where(:email => data['email']).first
+    user = User.find_or_initialize_by(email: data['email'])
 
-    unless user
-      user = User.create!(
-        token: omniauth['credentials']['token'],
-        name: data['name'],
-        first_name: data['first_name'],
-        email: data['email']
-      )
-    end
+    user.token = omniauth['credentials']['token']
+    user.refresh_token = omniauth['credentials']['refresh_token']
+    user.name = data['name']
+    user.first_name = data['first_name']
+    user.save
 
     user
   end
