@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   has_many :user_events
   has_many :events, through: :user_events
+  has_one :mail_schedule
 
   def self.find_for_google_oauth2(omniauth, signed_in_resource=nil)
     data = omniauth.info
