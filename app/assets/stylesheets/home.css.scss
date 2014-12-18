@@ -10,7 +10,7 @@ body{
 }
 
 .top-bg{
-  background-image: url('pattern.gif'); 
+  background-image: asset-url('pattern.gif');
   background-repeat: repeat;
   height:100%;
 }
