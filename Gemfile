@@ -51,6 +51,7 @@ gem 'google_calendar', '0.4.1'
 gem 'webmock', '1.20.4', group: :test
 gem 'sinatra', '1.4.5', group: :test
 gem 'timecop', '0.7.1', group: :test
+gem 'codeclimate-test-reporter', group: :test, require: false
 gem 'better_errors', '2.0.0', group: :development
 gem 'binding_of_caller', '0.7.2', group: :development
 

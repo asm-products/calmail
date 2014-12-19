@@ -1,0 +1,29 @@
+sudo: false # enables usage of container-based infrastructure
+
+language: ruby
+
+cache: bundler
+
+rvm:
+  - 2.1.3
+
+addons:
+  postgresql: "9.3"
+  code_climate:
+    repo_token:
+      secure: "g0Pmjn1+zGbDHkv1/0I46P+jQfVUNsQ/qVqz4d5V5XGdrHHciV3rCFa92D8EYMj1vhpNatEKqOIQyNUEGjYFkeXC7goGZlo3xPEKVwu0HJH//AyBoM2R+4/guR8tFCGOsAsEgI/ui7qv+HYkhCkS2KqwyvFDTbCfugwxT9bJrZ0="
+
+services:
+  - redis-server
+
+before_script:
+  - psql -c 'create database "calmail-test";' -U postgres
+  - cp config/database.yml.template config/database.yml
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+
+env:
+  - GOOGLE_CLIENT_ID=foo GOOGLE_CLIENT_SECRET=bar
