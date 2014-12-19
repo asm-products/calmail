@@ -2,6 +2,8 @@ sudo: false # enables usage of container-based infrastructure
 
 language: ruby
 
+cache: bundler
+
 rvm:
   - 2.1.3
 
