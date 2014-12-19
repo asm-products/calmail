@@ -11,8 +11,13 @@ addons:
   postgresql: "9.3"
 
 before_script:
+  - psql -c 'create database "calmail-test";' -U postgres
   - cp config/database.yml.template config/database.yml
-  - bundle exec rake db:setup
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
 
 env:
   global:
