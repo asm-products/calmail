@@ -26,6 +26,4 @@ script:
   - bundle exec rspec spec/
 
 env:
-  global:
-    - secure: "kjFGdN4YUXEY/4MhramMt8ANWPL5f7eHcsmlBvT+eBgUoq0+frJYi+U4cl5O9w0V7CB6+EGNQdDzX0e1nbP66XfynXrUfHiMimZBmms+YxavjZ9CFJB21Vt4d/cA5tEYFMSIUDwv1v0UtKn7F+eBhazkHzSdLtvM+O6uBR9r0XA="
-    - secure: "U2jUt7CvygCSSAmUtHlTZHbmAcS5nT+JWEYNd+hoJQsgmR0epbO+V5KlR44UjkayykepIiHzWvPFWaYhPT+tlf8j9L0xyIliaH94LUHlpW+b4Vk8SlXFVkMduWTGjZwo+NiOr8uDJ8MD+H/6YQky3GA9z/cXEPC9NuPK7wlGnfk="
+  - GOOGLE_CLIENT_ID=foo GOOGLE_CLIENT_SECRET=bar
