@@ -8,6 +8,9 @@ This is a product being built by the Assembly community. You can help push this 
 
 
 ###App setup
+
+*Make sure you have [Redis](http://redis.io) and [Postgres](http://www.postgresql.org) up and running.*
+
 - Install the required gems
 <br>`bundle install`
 - Set up the database
@@ -18,8 +21,8 @@ This is a product being built by the Assembly community. You can help push this 
 For Oauth to work, you need to obtain an [API key from Google](https://developers.google.com/api-client-library/python/guide/aaa_apikeys)
 
 The Oauth keys are set in the following environment variables:
-- ENV['GOOGLE_CLIENT_ID']
-- ENV['GOOGLE_CLIENT_SECRET']
+- `ENV['GOOGLE_CLIENT_ID']`
+- `ENV['GOOGLE_CLIENT_SECRET']`
 
 
 ### How Assembly Works
