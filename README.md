@@ -2,7 +2,7 @@
 
 <a href="https://assembly.com/calmail/bounties"><img src="https://asm-badger.herokuapp.com/calmail/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
 
-[![Travis](https://img.shields.io/travis/asm-products/calmail.svg)](https://travis-ci.org/asm-products/calmail) [![Code Climate](https://img.shields.io/codeclimate/github/asm-products/calmail.svg)](https://codeclimate.com/github/asm-products/calmail) [![Coveralls](https://img.shields.io/coveralls/asm-products/calmail.svg)](https://coveralls.io/r/asm-products/calmail)
+[![Travis](https://img.shields.io/travis/asm-products/calmail.svg?style=flat)](https://travis-ci.org/asm-products/calmail) [![Code Climate](https://img.shields.io/codeclimate/github/asm-products/calmail.svg?style=flat)](https://codeclimate.com/github/asm-products/calmail) [![Code Climate](https://img.shields.io/codeclimate/coverage/github/triAGENS/ashikawa-core.svg?style=flat)](https://codeclimate.com/github/asm-products/calmail)
 
 ## Your day's meetings summarized nightly
 
