@@ -1,0 +1,28 @@
+sudo: false # enables usage of container-based infrastructure
+
+language: ruby
+
+cache: bundler
+
+rvm:
+  - 2.1.3
+
+addons:
+  postgresql: "9.3"
+  code_climate:
+    repo_token:
+      secure: "g0Pmjn1+zGbDHkv1/0I46P+jQfVUNsQ/qVqz4d5V5XGdrHHciV3rCFa92D8EYMj1vhpNatEKqOIQyNUEGjYFkeXC7goGZlo3xPEKVwu0HJH//AyBoM2R+4/guR8tFCGOsAsEgI/ui7qv+HYkhCkS2KqwyvFDTbCfugwxT9bJrZ0="
+
+before_script:
+  - psql -c 'create database "calmail-test";' -U postgres
+  - cp config/database.yml.template config/database.yml
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+
+env:
+  global:
+    - secure: "kjFGdN4YUXEY/4MhramMt8ANWPL5f7eHcsmlBvT+eBgUoq0+frJYi+U4cl5O9w0V7CB6+EGNQdDzX0e1nbP66XfynXrUfHiMimZBmms+YxavjZ9CFJB21Vt4d/cA5tEYFMSIUDwv1v0UtKn7F+eBhazkHzSdLtvM+O6uBR9r0XA="
+    - secure: "U2jUt7CvygCSSAmUtHlTZHbmAcS5nT+JWEYNd+hoJQsgmR0epbO+V5KlR44UjkayykepIiHzWvPFWaYhPT+tlf8j9L0xyIliaH94LUHlpW+b4Vk8SlXFVkMduWTGjZwo+NiOr8uDJ8MD+H/6YQky3GA9z/cXEPC9NuPK7wlGnfk="
