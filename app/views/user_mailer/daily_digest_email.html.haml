@@ -145,7 +145,7 @@
                           %td.headerContent{:bgcolor => "#fff", :style => "color:#8e8e8e;font-size:14px;line-height:150%;background-color:#fff;", :valign => "top"}
                             %p{:style => "border-top:1px solid #D5D5D5; margin: 10px;"}
                             %p{:style => "font-family: 'Open Sans', Arial, sans-serif;color:#8e8e8e;font-size:14px;"}
-                              Hi, John Doe
+                              = "Hi, #{@user.name}"
                             %p{:style => "font-family: 'Open Sans', Arial, sans-serif;color:#8e8e8e;font-size:14px;"} text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here
                           %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
                       / // END HEADER
@@ -155,43 +155,29 @@
                         %p{:style => "font-family: Geneva, Tahoma, Arial, sans-serif;color:#fff;padding:5px 20px;"}
                           TODAY'S MEETINGS
                     / BEGIN FIRST BLOCK //
-                    %tr
-                      %td{:align => "center", :valign => "top"}
-                        %table#templateBody{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "background-color:#fff;", :width => "100%"}
-                          %tr{:height => "20px"}
-                          %tr
-                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
-                            %td.bodyContent{:style => "background-color:#f9f9f9;padding:20px;", :valign => "top"}
-                              %img{:align => "right", :src => "https://dl.dropboxusercontent.com/u/2043387/calmail/tab.png", :style => "margin-top:-20px;"}/
-                              %h2{:style => "color:#51baa9;display:block;font-family:'Open Sans', Arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin:5px;"} Philip & Cromwell Associates
-                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"}
-                                Merchants Quay, Dublin 2, Ireland,
-                                %strong 12:30 - 13:00
-                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Cody G. Urban, Kathryn R. Galindo, Helen T. Hackney
-                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Description text here Description text here Description text here Description text here
-                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
-                    / // END FIRST BLOCK
-                    / BEGIN HR
-                    %tr.hr{:bgcolor => "#fff", :style => "background-color:#fff;"}
-                      %td.hr{:align => "center", :bgcolor => "#fff", :style => "background-color:#fff;", :valign => "top"}
-                        %img{:src => "https://dl.dropboxusercontent.com/u/2043387/calmail/horizontal.png"}/
-                    / // END HR
-                    / BEGIN REPEATING BLOCK
-                    %tr
-                      %td{:align => "center", :valign => "top"}
-                        %table#templateBody{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "background-color:#fff;", :width => "100%"}
-                          %tr
-                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
-                            %td.bodyContent{:style => "background-color:#f9f9f9;padding:20px;", :valign => "top"}
-                              %img{:align => "right", :src => "https://dl.dropboxusercontent.com/u/2043387/calmail/tab.png", :style => "margin-top:-20px;"}/
-                              %h2{:style => "color:#51baa9;display:block;font-family:'Open Sans', Arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin:5px;"} Philip & Cromwell Associates
-                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"}
-                                Merchants Quay, Dublin 2, Ireland,
-                                %strong 12:30 - 13:00
-                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Cody G. Urban, Kathryn R. Galindo, Helen T. Hackney
-                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Description text here Description text here Description text here Description text here
-                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
-                    / // END REPEATING BLOCK
+                    - @events.each do |event|
+                      %tr
+                        %td{:align => "center", :valign => "top"}
+                          %table#templateBody{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "background-color:#fff;", :width => "100%"}
+                            %tr{:height => "20px"}
+                            %tr
+                              %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                              %td.bodyContent{:style => "background-color:#f9f9f9;padding:20px;", :valign => "top"}
+                                %img{:align => "right", :src => "https://dl.dropboxusercontent.com/u/2043387/calmail/tab.png", :style => "margin-top:-20px;"}/
+                                %h2{:style => "color:#51baa9;display:block;font-family:'Open Sans', Arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin:5px;"}
+                                  = event.title
+                                %p{:style => "font-family: 'Open Sans', Arial, sans-serif"}
+                                  Merchants Quay, Dublin 2, Ireland,
+                                  %strong 12:30 - 13:00
+                                %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Cody G. Urban, Kathryn R. Galindo, Helen T. Hackney
+                                %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Description text here Description text here Description text here Description text here
+                              %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                      / // END FIRST BLOCK
+                      / BEGIN HR
+                      %tr.hr{:bgcolor => "#fff", :style => "background-color:#fff;"}
+                        %td.hr{:align => "center", :bgcolor => "#fff", :style => "background-color:#fff;", :valign => "top"}
+                          %img{:src => "https://dl.dropboxusercontent.com/u/2043387/calmail/horizontal.png"}/
+                      / // END HR
                     / BEGIN FOOTER //
                     %tr
                       %td{:align => "center", :valign => "top"}
