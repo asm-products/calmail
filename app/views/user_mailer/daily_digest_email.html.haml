@@ -1,6 +1,210 @@
 !!!
-%html
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Calmail
-  %body
-    %p This is a daily email for #{@user.email}
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      /* CLIENT-SPECIFIC STYLES */
+      			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+      			.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+      			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+      			body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+      			table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+      			img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+      			/*  RESET STYLES */
+      			body{margin:0; padding:0;}
+      			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+      			table{border-collapse:collapse !important;}
+      			body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+      			#bodyCell{padding:25px;}
+      			#templateContainer{width:600px;}
+      			body, #bodyTable{
+      				background-color:#ebebeb;
+      				border-collapse:collapse !important;
+      				border-spacing:0;
+      			}
+      			a:link{
+      				color:#EA772B;
+      				font-weight:normal;
+      				text-decoration:underline;
+      			}
+      			h2{
+      				color:#51baa9 !important;
+      				display:block;
+      				font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      				font-size:22px;
+      				font-style:normal;
+      				font-weight:bold;
+      				line-height:125%;
+      				letter-spacing:normal;
+      				margin: 5px;
+      			}
+      			#templatePreheader{
+      				background-color:#ffffff;
+      			}
+      			.headerContent{
+      				color:#8e8e8e;
+      				font-family:'Open Sans', Helvetica, Arial, sans-serif;
+      				font-size:14px;
+      				line-height:150%;
+      				background-color: #fff;
+      			}
+
+      			.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
+      				color:#EA772B;
+      				font-weight:normal;
+      				text-decoration:underline;
+      			}
+      			#templateBody{
+      				background-color:#FFFFFF;
+      			}
+      			.bodyContent{
+      				color:#8e8e8e;
+      				font-family:'Open Sans', Helvetica, Arial, sans-serif;
+      				font-size:14px;
+      				line-height:150%;
+      				padding: 20px;
+      				text-align:left;
+      			}
+      			.bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */{
+      				color:#2ABDD7;
+      				font-weight:normal;
+      				text-decoration:underline;
+      			}
+      			.hr {
+      				background-color: #fff;
+      			}
+      			#templateFooter{
+      				background-color:#ffffff;
+      				border-top:1px solid #FFFFFF;
+      			}
+      			.footerContent{
+      				color:#808080;
+      				font-family:'Open Sans', Helvetica, Arial, sans-serif;
+      				font-size:14px;
+      				line-height:150%;
+      				padding:10px;
+      				text-align:center;
+      			}
+      			.footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */{
+      				color:#52b9a8;
+      				font-weight:normal;
+      				text-decoration:underline;
+      			}
+
+      			/* MOBILE STYLES */
+
+            @media only screen and (max-width: 480px){
+      				body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+              body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+      				#bodyCell{padding:10px !important;}
+      				#templateContainer{
+      					max-width:600px !important;
+      					width:100% !important;
+      				}
+      				.headerContent{
+      					font-size:18px !important;
+      					line-height:125% !important;
+      				}
+      				.bodyContent{
+      					font-size:18px !important;
+      					line-height:150% !important;
+      				}
+      				.footerContent{
+      					font-size:12px !important;
+      					line-height:150% !important;
+      				}
+      				#date{
+      					font-size: 12px !important;
+      				}
+      			}
+  %body{:leftmargin => "0", :marginheight => "0", :marginwidth => "0", :offset => "0", :style => "height:100%; margin:0;padding:0;width:100%;", :topmargin => "0"}
+    %center
+      %table#bodyTable{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :height => "100%", :style => "height:100%; margin:0;padding:0;width:100%;background-color:#ebebeb;border-collapse:collapse;border-spacing:0;", :width => "100%"}
+        %tr
+          %td#bodyCell{:align => "center", :style => "height:100%;margin:0;padding:25px;width:100%;", :valign => "top"}
+            %table#templateContainer{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "width:600px;"}
+              %tr
+                %td{:align => "center", :valign => "top"}
+                  %table#templatePreheader{:bgcolor => "#ebebeb", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "background-color:#fff;", :width => "100%"}
+                    %tr{:bgcolor => "#ebebeb"}
+                      %td{:style => "padding:0;", :valign => "top"}
+                    %tr
+                      %td{:align => "left", :bgcolor => "#ffffff", :valign => "top"}
+                        %img{:src => "https://dl.dropboxusercontent.com/u/2043387/calmail/logo.png", :style => "display:block;padding: 10px 0 0 10px;"}/
+                      %td{:align => "right", :style => "padding: 20px 30px 0 0;", :valign => "bottom"}
+                        %p#date{:style => "font-family: Geneva, Tahoma, Arial, sans-serif;color:#52b9a8;"}
+                          OCTOBER 9, 2014
+                    %tr
+                      / BEGIN HEADER //
+                      %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                        %tr
+                          %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                          %td.headerContent{:bgcolor => "#fff", :style => "color:#8e8e8e;font-size:14px;line-height:150%;background-color:#fff;", :valign => "top"}
+                            %p{:style => "border-top:1px solid #D5D5D5; margin: 10px;"}
+                            %p{:style => "font-family: 'Open Sans', Arial, sans-serif;color:#8e8e8e;font-size:14px;"}
+                              Hi, John Doe
+                            %p{:style => "font-family: 'Open Sans', Arial, sans-serif;color:#8e8e8e;font-size:14px;"} text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here
+                          %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                      / // END HEADER
+                    %tr{:bgcolor => "#ebebeb", :height => "30px"}
+                    %tr{:bgcolor => "#52b9a8", :height => "60px"}
+                      %td
+                        %p{:style => "font-family: Geneva, Tahoma, Arial, sans-serif;color:#fff;padding:5px 20px;"}
+                          TODAY'S MEETINGS
+                    / BEGIN FIRST BLOCK //
+                    %tr
+                      %td{:align => "center", :valign => "top"}
+                        %table#templateBody{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "background-color:#fff;", :width => "100%"}
+                          %tr{:height => "20px"}
+                          %tr
+                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                            %td.bodyContent{:style => "background-color:#f9f9f9;padding:20px;", :valign => "top"}
+                              %img{:align => "right", :src => "https://dl.dropboxusercontent.com/u/2043387/calmail/tab.png", :style => "margin-top:-20px;"}/
+                              %h2{:style => "color:#51baa9;display:block;font-family:'Open Sans', Arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin:5px;"} Philip & Cromwell Associates
+                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"}
+                                Merchants Quay, Dublin 2, Ireland,
+                                %strong 12:30 - 13:00
+                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Cody G. Urban, Kathryn R. Galindo, Helen T. Hackney
+                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Description text here Description text here Description text here Description text here
+                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                    / // END FIRST BLOCK
+                    / BEGIN HR
+                    %tr.hr{:bgcolor => "#fff", :style => "background-color:#fff;"}
+                      %td.hr{:align => "center", :bgcolor => "#fff", :style => "background-color:#fff;", :valign => "top"}
+                        %img{:src => "https://dl.dropboxusercontent.com/u/2043387/calmail/horizontal.png"}/
+                    / // END HR
+                    / BEGIN REPEATING BLOCK
+                    %tr
+                      %td{:align => "center", :valign => "top"}
+                        %table#templateBody{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "background-color:#fff;", :width => "100%"}
+                          %tr
+                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                            %td.bodyContent{:style => "background-color:#f9f9f9;padding:20px;", :valign => "top"}
+                              %img{:align => "right", :src => "https://dl.dropboxusercontent.com/u/2043387/calmail/tab.png", :style => "margin-top:-20px;"}/
+                              %h2{:style => "color:#51baa9;display:block;font-family:'Open Sans', Arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin:5px;"} Philip & Cromwell Associates
+                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"}
+                                Merchants Quay, Dublin 2, Ireland,
+                                %strong 12:30 - 13:00
+                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Cody G. Urban, Kathryn R. Galindo, Helen T. Hackney
+                              %p{:style => "font-family: 'Open Sans', Arial, sans-serif"} Description text here Description text here Description text here Description text here
+                            %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
+                    / // END REPEATING BLOCK
+                    / BEGIN FOOTER //
+                    %tr
+                      %td{:align => "center", :valign => "top"}
+                        %table#templateFooter{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "background-color:#fff;border-top:1px solid #fff;", :width => "100%"}
+                          %tr
+                            %td.footerContent{:style => "padding-top:0;padding:10px;text-align:center;", :valign => "top"}
+                              %p{:style => "border-top:1px solid #D5D5D5; margin: 20px;"}
+                              %p{:style => "color:#696969; font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:13px;color:#bbbbbb;"} View in Browser
+                              %span{:style => "color:#696969; font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:12px;color:#bbbbbb;"} Footer text Footer text Footer text Footer text Footer text Footer text
+                              %br/
+                              %span{:style => "font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:11px;color:#bbbbbb;"}
+                                email settings |
+                                %a{:href => "", :style => "color:#52b9a8; font-family:'Open Sans', Helvetica, Arial, sans-serif; text-decoration:none;"} unsubscribe
+                              %br/
+                              %br/
+                    / // END FOOTER
