@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:google_oauth2]
 
-  has_many :user_events
+  has_many :user_events, dependent: :destroy
   has_many :events, through: :user_events
   has_one :mail_schedule
 

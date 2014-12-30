@@ -15,6 +15,7 @@ class EventsCreator
         event.location = calendar_event.location
         event.raw = calendar_event.raw.to_json
         event.html_link = calendar_event.html_link
+        event.attendees = calendar_event.attendees
       end.tap do |event|
         user.events << event
       end
