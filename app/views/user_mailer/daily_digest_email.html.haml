@@ -133,7 +133,7 @@
                       %td{:style => "padding:0;", :valign => "top"}
                     %tr
                       %td{:align => "left", :bgcolor => "#ffffff", :valign => "top"}
-                        %img{:src => "https://dl.dropboxusercontent.com/u/2043387/calmail/logo.png", :style => "display:block;padding: 10px 0 0 10px;"}/
+                        = image_tag 'logo.png', { style: "display:block;padding: 10px 0 0 10px;"}
                       %td{:align => "right", :style => "padding: 20px 30px 0 0;", :valign => "bottom"}
                         %p#date{:style => "font-family: Geneva, Tahoma, Arial, sans-serif;color:#52b9a8;"}
                           OCTOBER 9, 2014
@@ -163,7 +163,7 @@
                             %tr
                               %td{:bgcolor => "#ffffff", :valign => "top", :width => "20px"}
                               %td.bodyContent{:style => "background-color:#f9f9f9;padding:20px;", :valign => "top"}
-                                %img{:align => "right", :src => "https://dl.dropboxusercontent.com/u/2043387/calmail/tab.png", :style => "margin-top:-20px;"}/
+                                =image_tag 'tab.png', { align: "right", style: "margin-top:-20px;" }
                                 %h2{:style => "color:#51baa9;display:block;font-family:'Open Sans', Arial, sans-serif;font-size:22px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin:5px;"}
                                   = event.title
                                 %p{:style => "font-family: 'Open Sans', Arial, sans-serif"}
@@ -176,7 +176,7 @@
                       / BEGIN HR
                       %tr.hr{:bgcolor => "#fff", :style => "background-color:#fff;"}
                         %td.hr{:align => "center", :bgcolor => "#fff", :style => "background-color:#fff;", :valign => "top"}
-                          %img{:src => "https://dl.dropboxusercontent.com/u/2043387/calmail/horizontal.png"}/
+                          = image_tag 'horizontal.png'
                       / // END HR
                     / BEGIN FOOTER //
                     %tr
